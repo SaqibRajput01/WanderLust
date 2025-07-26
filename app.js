@@ -1,8 +1,12 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const path = require('path');
-const MongoURL = "mongodb://127.0.0.1:27017/wanderlust";
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -41,7 +45,7 @@ main().then(() => {
 
 
 async function main() {
-    await mongoose.connect(MongoURL);
+    await mongoose.connect(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/wanderlust');
 }
 //Mongoose connection ends here.
 
@@ -55,7 +59,7 @@ app.listen(8080, () => {
 
 //session and flash middleware
 const sessionOptions = {
-    secret: "thisisasecretkey",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -78,19 +82,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-
-//Routes
-
-// //fakeUser
-// app.get('/DemoUser', async (req, res) => {
-//     const fakeUser = new User({
-//         email: "student@gmail.com",
-//         username: "student1"
-//     });
-
-//     let registeredUser = await User.register(fakeUser, "HelloWorld");
-//     res.send("The Registered User is : " + registeredUser);
-// })
 
 
 //Hompage
