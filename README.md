@@ -1,46 +1,49 @@
-# 🌍 WanderLust
+# 🏕️ WanderLust - Airbnb Clone (MERN Stack)
 
-WanderLust is a full-stack travel booking and exploration web application built using **Node.js**, **Express**, and **MongoDB**. It features robust user authentication, a clean MVC architecture, and dynamic server-side rendered pages using **EJS**. The application is deployed on **Render**.
+A full-stack web app for exploring and booking listings, inspired by Airbnb. Built with MongoDB, Express.js, React.js, Node.js, and EJS.
 
----
+## 🔧 Tech Stack
+- MongoDB
+- Express.js
+- React.js
+- Node.js
+- EJS (templating)
+- Cloudinary, Mapbox, Passport.js
 
-## 🚀 Features
+## 📸 Preview
 
-- 🧭 User authentication with **Passport.js**
-- 🗺️ Explore travel destinations
-- 💬 Add and manage reviews/comments
-- 📁 Organized in **MVC folder structure**
-- 🛡️ Secure with middlewares (Helmet, Sanitization, etc.)
-- 📄 Beautiful EJS templates for SSR
-- 🌐 Fully deployed on Render
+![📁 Images Folder](https://github.com/SaqibRajput01/WanderLust/blob/main/Wanderlust_Images.zip)
 
----
+## 📁 Folder Structure
 
-## 🛠 Tech Stack
+/wanderlust
+├── /models
+├── /routes
+├── /views
+├── /public
+├── /controllers
+├── /config
+├── app.js
+└── .env
 
-| Technology | Purpose |
-|------------|---------|
-| **Node.js** | JavaScript runtime |
-| **Express.js** | Web framework |
-| **MongoDB** | NoSQL Database |
-| **Mongoose** | MongoDB ODM |
-| **EJS** | Templating engine |
-| **Passport.js** | Authentication |
-| **Helmet, Express-Mongo-Sanitize** | Security |
-| **Render** | Hosting |
 
----
+## 🚀 Getting Started
 
-## 📁 Folder Structure (MVC)
+```bash
+git clone https://github.com/SaqibRajput01/Wanderlust
+nodemon app.js
+# Add your own .env file
 
-WanderLust/
-│
-├── models/ # Mongoose schemas
-├── views/ # EJS templates
-├── routes/ # Express route handlers
-├── public/ # Static assets (CSS, JS, images)
-├── controllers/ # Business logic
-├── middleware/ # Custom middleware
-├── app.js # Main app entry
-├── .env # Environment variables (not uploaded)
-└── README.md
+
+🌍 Deployment (coming soon)
+Deployment to Render and Netlify in progress. Currently tested locally.
+
+👨‍💻 Author
+Saqib Bin Tariq
+
+📧 connectsaqibbintariq@gmail.com
+
+
+
+
+
